@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/footer';
 
 
-function SavedView() {
+const SavedView = () => {
   return (
     <div className="ShortPage">
       <Navbar/>

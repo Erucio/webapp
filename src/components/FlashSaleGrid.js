@@ -2,13 +2,13 @@ import React from 'react'
 import ProductCard from '../components/ProductCard';
 import { NavLink } from 'react-router-dom';
 
-function bigCard() {
+const FlashSaleGrid = ({FlashSale}) => {
   return (
     <>
       <section className="flashSaleGrid">
         <div className="container">
           
-          <div class="flashSaleBoxLeft">
+          <div className="flashSaleBoxLeft">
               <h1>2 FOR USD $29</h1>
               <NavLink to="/products" end className="btn btn-theme"> 
                   <span className="corner-topLeft"></span>
@@ -29,7 +29,7 @@ function bigCard() {
           <ProductCard/>
           </div>
 
-          <div class="flashSaleBoxRight">
+          <div className="flashSaleBoxRight">
               <h1>2 FOR USD $49</h1>
               <NavLink to="/products" end className="btn btn-theme"> 
                   <span className="corner-topLeft"></span>
@@ -43,4 +43,4 @@ function bigCard() {
   )
 }
 
-export default bigCard
+export default FlashSaleGrid

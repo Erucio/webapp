@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from '../assets/images/logo.svg'
 import { NavLink } from 'react-router-dom'
 
-function navbar() {
+const navbar = () => {
     return (
     
                 <nav className="header">
@@ -12,9 +12,9 @@ function navbar() {
                         </div>
 
                         <div className="middleLinks">
-                            <NavLink to="/" end activeClassName="Nav home"> Home </NavLink>
+                            <NavLink to="/" end className="Nav home"> Home </NavLink>
                             <NavLink to="/categories" end className="Nav"> Categories </NavLink>
-                            <NavLink to="/products" end className="Nav"> Products </NavLink>
+                            <NavLink to="/products" className="Nav"> Products </NavLink>
                             <NavLink to="/contacts" end className="Nav"> Contacts </NavLink>
                         </div>
                         <div className="right-buttons">

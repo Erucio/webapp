@@ -3,7 +3,7 @@ import img1 from '../assets/images/credit-card.svg'
 import img2 from '../assets/images/customer-service.svg'
 import img3 from '../assets/images/delivery-truck.svg'
 
-function delivery() {
+const delivery = () => {
     return (
     <section className="deliveryInfo">
         <div className="container">

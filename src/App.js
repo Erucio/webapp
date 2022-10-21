@@ -9,8 +9,9 @@ import SearchView from './Views/SearchView';
 import CompareView from './Views/CompareView';
 import SavedView from './Views/SavedView';
 import CartView from './Views/CartView';
+import ProductDetailView from './Views/ProductDetailView';
 
-function App() {
+const App = () =>{
   return (
     <BrowserRouter>
       <Routes>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/Saved" element={<SavedView />} />
         <Route path="/Cart" element={<CartView />} />
         <Route path="*" element={<NotFoundView />} />
+        <Route path="products/:id" element={<ProductDetailView/>} />
       </Routes>
     </BrowserRouter>
   );

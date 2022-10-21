@@ -4,7 +4,7 @@ import Contacts from '../components/contacts';
 import Footer from '../components/footer';
 
 
-function contactsview() {
+const contactsview = () => {
   return (
     <>
       <Navbar/>

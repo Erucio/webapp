@@ -4,9 +4,11 @@
 
 
 }
-    .card .img
-    {
-        
+    .card .img,
+    .card img{
+        overflow: hidden;
+        object-fit: cover;
+        width: 100%;
         opacity: 70%;
         position: relative;
         height: 210px;
@@ -17,11 +19,6 @@
         .card:hover img{
             opacity: 100%;
         }
-    .card img{
-        height: 100%;
-        width: 100%;
-        opacity: 70%;
-    }
 
     .card .card-body{
         text-align: center;

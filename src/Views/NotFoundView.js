@@ -1,6 +1,6 @@
 import React from 'react'
 
-function NotFoundView() {
+const NotFoundView = () =>{
   return (
     <div>404 Page not found</div>
   )

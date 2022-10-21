@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-function contacts() {
+const contacts = () => {
   return (
 <section className="formMap">
         <div className="map">
@@ -10,7 +10,7 @@ function contacts() {
                     <NavLink to={"/"}><i className="fa-solid fa-home"></i></NavLink>
                     <p> Contacts </p>
                 </div>
-                <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d282.82720559699123!2d-81.36286800134407!3d25.81411291488444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88da5d290b0f055d%3A0xf8436ec57d5ba1b9!2sThe%20Captain&#39;s%20Lodge!5e0!3m2!1ssv!2sse!4v1665474799933!5m2!1ssv!2sse'></iframe>
+                <iframe title="googleMap" src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d282.82720559699123!2d-81.36286800134407!3d25.81411291488444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88da5d290b0f055d%3A0xf8436ec57d5ba1b9!2sThe%20Captain&#39;s%20Lodge!5e0!3m2!1ssv!2sse!4v1665474799933!5m2!1ssv!2sse'></iframe>
             </div>
         </div>
         <div className="form">

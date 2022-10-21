@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/footer';
 
 
-function ProductView() {
+const ProductView = () => {
   return (
     <div className="ShortPage">
     <Navbar/>

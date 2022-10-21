@@ -1,26 +1,15 @@
-import React,{useState} from 'react'
+import React from 'react'
 import ProductCard from './ProductCard'
 
-function FeaturedProducts({title}) {
-  const[products, setProducts] = useState([
-    {id: 1, productName: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, },
-    {id: 2, productName: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, },
-    {id: 3, productName: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, },
-    {id: 4, productName: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, },
-    {id: 5, productName: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, },
-    {id: 6, productName: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, },
-    {id: 7, productName: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, },
-    {id: 8, productName: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, },
-
-
-  ])
+const FeaturedProducts = ({title, products}) => {
   return (
     <>
-        <section class="featuredProducts">
-            <div class="container">
+        <section className="featuredProducts">
+            <div className="container">
                 <h1>{title}</h1>
-                <div class="row row-cols-1 row-cols-md-4 g-4">
-                    {products.map(product=><ProductCard/>)}
+                <div className="row row-cols-1 row-cols-md-4 g-4">
+                    {products.map(product => <ProductCard key={product.id} product={product} />)}
+                    
          
                 </div>
             </div>
