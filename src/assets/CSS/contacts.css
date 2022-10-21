@@ -1,0 +1,62 @@
+.map .container{
+    max-width: 1110px;
+    height: 39rem;
+}
+    .map .container iframe{
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    right: 0;
+    }
+    .map .container .icon{
+        display: flex;
+        gap: 0.5rem;
+        padding: 2.2rem 0;
+        margin: 0;
+        
+    }
+        .map .container .icon a{
+            margin-top: -0.2rem;
+            color: var(--color-dark);
+            align-items: center;
+        }
+    .map .container .icon p{
+        font-size: 0.8em;
+    }
+
+.form .container{
+    max-width: 1110px;
+}
+    .form .container h3{
+        font-size: 18px;
+        font-weight: var(--font-weight-bold);
+    }
+        .form .container .input{
+            
+            display: flex;
+            justify-content: space-between;
+            gap: 2.5rem;
+        }
+        .form .container .input .nameMail{
+            width: 100%;
+        }
+            .form .container .input .nameMail input{
+                padding: 1.25rem;
+                font-size: 1.12rem;
+                width: 100%;
+            }
+    .form .container textarea{
+        padding: 1.25rem;
+        font-size: 1.12rem;
+    }
+
+    .form .container .errorMsg{
+        color: var(--color-theme);
+        font-size: 0.9em;
+        margin-top: 0.2rem;
+        padding: 0 1.25rem;
+    }
+    .form .container .error{
+        border: 1px solid var(--color-theme);
+        color: var(--color-theme);
+    }
