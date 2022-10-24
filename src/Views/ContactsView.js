@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
-import Contacts from '../components/contacts';
-import Footer from '../components/footer';
+import Contacts from '../components/ContactForm';
+import Footer from '../components/Footer';
 
 
 const contactsview = () => {

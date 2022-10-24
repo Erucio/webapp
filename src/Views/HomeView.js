@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar';
 import Showcase from '../components/Showcase';
-import PamShowcase from '../components/pamShowcase';
+import PamShowcase from '../components/PamShowcase';
 import Delivery from '../components/Delivery';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 import FeaturedProducts from '../components/FeaturedProducts';
 import FlashSaleGrid from '../components/FlashSaleGrid';
 
@@ -17,9 +17,9 @@ const HomeView = () => {
     {id: 5, productName: "Modern Yellow Sweatshirt", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/2181872/pexels-photo-2181872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"},
     {id: 6, productName: "Modern Black Jacket", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/449977/pexels-photo-449977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
     {id: 7, productName: "Modern Pink Dress", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-    {id: 8, productName: "Modern Summer Top", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/1805411/pexels-photo-1805411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-    
+    {id: 8, productName: "Modern Summer Top", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/1805411/pexels-photo-1805411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" }   
   ])
+
 
   return (
     <div className="HomePage">

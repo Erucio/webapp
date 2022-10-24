@@ -7,28 +7,28 @@ const delivery = () => {
     return (
     <section className="deliveryInfo">
         <div className="container">
-            <div className="card">
+            <div className="deliveryCard">
                 <div className="deliveryPic">
                     <img src={img2} alt="customer support"></img>
                 </div>
                 <h1>Customer Support</h1>
                 <p>Village did removed enjoyed explain talking.</p>
             </div>
-            <div className="card">
+            <div className="deliveryCard">
                 <div className="deliveryPic">
                     <img src={img1} alt="payment"></img>
                 </div>
                 <h1>Secured Payment</h1>
                 <p>Village did removed enjoyed explain talking.</p>
             </div>
-            <div className="card">
+            <div className="deliveryCard">
                 <div className="deliveryPic">
                     <img src={img3} alt="delivery truck"></img>
                 </div>
                 <h1>Free Home Delivery</h1>
                 <p>Village did removed enjoyed explain talking.</p>
             </div>
-            <div className="card">
+            <div className="deliveryCard">
                 <div className="deliveryPic">
                     <img src={img3} alt="delivery truck"></img>
                 </div>

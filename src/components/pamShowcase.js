@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 
 
-const pamShowcase = () => {
+const PamShowcase = () => {
   return (
     <section className="pamreif">
       <div className="container">
@@ -34,4 +34,4 @@ const pamShowcase = () => {
   )
 }
 
-export default pamShowcase
+export default PamShowcase
