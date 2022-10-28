@@ -10,7 +10,6 @@ const contactsview = () => {
       <Navbar/>
       <Contacts/>
       <Footer/>
-    
     </>
   )
 }
