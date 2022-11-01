@@ -8,19 +8,19 @@
     height: 60%;
     right: 0;
     }
-    .map .container .icon{
+    .container .icon{
         display: flex;
         gap: 0.5rem;
         padding: 2.2rem 0;
         margin: 0;
         
     }
-        .map .container .icon a{
+        .container .icon a{
             margin-top: -0.2rem;
             color: var(--color-dark);
             align-items: center;
         }
-    .map .container .icon p{
+    .container .icon p{
         font-size: 0.8em;
     }
 
@@ -53,7 +53,7 @@
             .form .container .validFailEmail{
                 border: 1px solid red;
             }
-            .form .container .validFailComment{
+            .form .container .validFailComments{
                 border: 1px solid red;
             }
 
@@ -78,12 +78,7 @@
         padding: 0 1.25rem;
     }
 
-
-
-    
-    /* Form succesfully Submitted */
-    .form .submit .btn-theme{
-        background-color: gray;
-        cursor: not-allowed;
-
-    }
+.alert h1{
+    font-size: var(--font-size-18);
+    font-weight: bold;
+}

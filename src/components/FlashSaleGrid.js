@@ -2,7 +2,7 @@ import React from 'react'
 import ProductCard from '../components/ProductCard';
 import { NavLink } from 'react-router-dom';
 
-const FlashSaleGrid = ({FlashSale, flashProducts, products}) => {
+const FlashSaleGrid = ({products = []}) => {
   return (
     <>
       <section className="flashSaleGrid">
@@ -17,11 +17,11 @@ const FlashSaleGrid = ({FlashSale, flashProducts, products}) => {
               </NavLink>
           </div>
           <div className="rightProducts">
-          {products.map(product => <ProductCard key={product.id} product={product} />)}
+          {products.map(product => <ProductCard key={product.articleNumber} product={product} />)}
 
           </div>
           <div className="leftProducts">
-          {products.map(product => <ProductCard key={product.id} product={product} />)}
+          {products.map(product => <ProductCard key={product.articleNumber} product={product} />)}
 
           </div>
 

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom'
 
 const ContactForm = () => {
-    const [contactForm, setContactForm] = useState({name: '', email: '', comment: ''})
+    const [contactForm, setContactForm] = useState({name: '', email: '', comments: ''})
     const [formErrors, setFormErrors] = useState({})
     const [canSubmit, setCanSubmit] = useState(false)
 
@@ -35,13 +35,13 @@ const ContactForm = () => {
         return null;
     }
 
-    const validateComment = (value) => {
+    const validateComments = (value) => {
          
-        if(!value.comment)
+        if(!value.comments)
         return "You must enter a comment"
 
-        else if(value.comment.length < 10)
-        return "Your comment must be at least 10 characters long"
+        else if(value.comments.length < 10)
+        return "Your comments must be at least 10 characters long"
 
         return null;
             
@@ -52,25 +52,30 @@ const ContactForm = () => {
 
         errors.name = validateName(data)
         errors.email = validateEmail(data)
-        errors.comment = validateComment(data)
+        errors.comments = validateComments(data)
    
-        if(errors.name === null && errors.email === null && errors.comment === null) {
+        if(errors.name === null && errors.email === null && errors.comments === null) {
 
-            console.log('can submit')
+            let json = JSON.stringify(data)
 
-            setCanSubmit(true)
+            fetch ('https://win22-webapi.azurewebsites.net/api/contactform', {
+                method: 'POST',
+                headers: {'Content-Type' : 'application/json'},
+                body: json,
 
-       
+        })
 
-        } else {
-
-            console.log('can not submit')
-
-            setCanSubmit(false)      
-
-        } 
-
-               }
+        .then(res => {
+            console.log('submitted')
+            console.log(res.status)  
+            if(res.status === 200) {   
+                setCanSubmit(true)
+            }
+            else
+                setCanSubmit(false) 
+                console.log('can not submit')  
+         })
+        }}
 
     let inputName = 'validSuccessName'
         if(formErrors.name)
@@ -80,15 +85,11 @@ const ContactForm = () => {
         if(formErrors.email)
             inputEmail ='validFailEmail'
 
-    let inputComment = 'validSuccessComment'
-            if(formErrors.comment)
-                inputComment ='validFailComment'
+    let inputComments = 'validSuccessComments'
+            if(formErrors.comments)
+                inputComments ='validFailComments'
     
 
-    let submitButton = 'disabled'
-            if(canSubmit=== true)
-            submitButton = 'enabled'
-        
     const handleChange = (e) => {
         e.preventDefault()
         const {id, value} = e.target
@@ -103,8 +104,8 @@ const ContactForm = () => {
         setFormErrors({...formErrors, email: validateEmail(contactForm)})
     }
 
-    const handleKeyUpComment = () => {
-        setFormErrors({...formErrors, comment: validateComment(contactForm)})
+    const handleKeyUpComments = () => {
+        setFormErrors({...formErrors, comments: validateComments(contactForm)})
     }
 
     const handleSubmit= (e) => {
@@ -128,8 +129,10 @@ const ContactForm = () => {
                             <div className="form">
                                 <div className="container">
                                     {canSubmit ? (
-                                                                 
-                                    <h1>Thank you for your comment</h1>                                  
+                                     <div className="alert alert-success text-center" role="alert">
+                                        <h1>Thank you for your comments</h1>
+                                        <p>We probably won´t come back to you but still appreciate your comment and effort and all that.</p>                                
+                                     </div>                            
                                     )
                                     :
                                     (<>
@@ -163,24 +166,24 @@ const ContactForm = () => {
                                         </div>                
                                         <div className="mb-3 d-grid">
                                             <textarea 
-                                                className={inputComment}
+                                                className={inputComments}
                                                 style={{resize: 'none'}} 
-                                                id="comment"  type="area" 
-                                                placeholder="Comment" 
+                                                id="comments"  type="area" 
+                                                placeholder="Comments" 
                                                 rows="4" 
-                                                value={contactForm.comment} 
+                                                value={contactForm.comments} 
                                                 onChange={handleChange}
-                                                onKeyUp={handleKeyUpComment}
+                                                onKeyUp={handleKeyUpComments}
                                                 />
-                                            <div className="errorMessage">{formErrors.comment}</div>
+                                            <div className="errorMessage">{formErrors.comments}</div>
 
                                         </div>
-                                        <div className={submitButton}>
+                                        <div className="enabled">
                                             <div className="mb-3">
                                                 <button type="submit" className="btn-theme">
                                                     <span className="corner-topLeft"></span>
                                                     <span className="corner-bottomRight"></span>
-                                                    Post Comment</button>
+                                                    Post Comments</button>
                                             </div>
                                         </div>
                                     </form>
