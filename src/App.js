@@ -16,21 +16,28 @@ import { useEffect } from 'react';
 
 function App() {
   const [products, setProducts] = useState({allProducts:[], featuredProducts:[],
-    //flashGridProducts:[]  
+    flashSaleGridProducts:[]  
   })
   useEffect (() => {
     const fetchAllProducts = async () => {
       let result = await fetch ('https://win22-webapi.azurewebsites.net/api/products')
       setProducts({...products, allProducts: await result.json()})
     }
-    fetchAllProducts()
+      fetchAllProducts()
 
-  const fetchFeaturedProducts = async () => {
-    let result = await fetch ('https://win22-webapi.azurewebsites.net/api/products?take=8')
-    setProducts({...products, featuredProducts: await result.json()})
-  }
+    const fetchFeaturedProducts = async () => {
+      let result = await fetch ('https://win22-webapi.azurewebsites.net/api/products?take=8')
+      setProducts({...products, featuredProducts: await result.json()})
+    }
 
-  fetchFeaturedProducts()
+      fetchFeaturedProducts()
+
+    const fetchFlashSaleGridProducts = async () => {
+      let result = await fetch ('https://win22-webapi.azurewebsites.net/api/products?take=4')
+      setProducts({...products, flashSaleGridProducts: await result.json()})
+    }
+
+      fetchFlashSaleGridProducts()
 },[setProducts])
 
 
@@ -47,7 +54,7 @@ function App() {
             <Route path="/Saved" element={<SavedView />} />
             <Route path="/Cart" element={<CartView />} />
             <Route path="*" element={<NotFoundView />} />
-            <Route path="products/:id" element={<ProductDetailView/>} />
+            <Route path="products/:Name" element={<ProductDetailView/>} />
           </Routes>
       </ProductContext.Provider>
     </BrowserRouter>

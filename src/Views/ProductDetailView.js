@@ -1,12 +1,14 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import ProductDetail from '../components/ProductDetail'
 
 const ProductDetailView = () => {
+
   return (
-    <div className="ShortPage">
+    <div>
         <Navbar/>
-        OOOOJDÅ DET FANNS INGET HÄR!??!?!?
+        <ProductDetail/>
         <Footer/>
     </div>
   )

@@ -18,7 +18,7 @@ const HomeView = () => {
         <Showcase/>
         <FeaturedProducts title="Featured Products" products={products.featuredProducts}/>
         <PamShowcase/>
-        <FlashSaleGrid title="Flash Sale" products={products.featuredProducts}/>
+        <FlashSaleGrid title="Flash Sale" products={products.flashSaleGridProducts}/>
         <Delivery/>
         <Footer/>     
     </div>
