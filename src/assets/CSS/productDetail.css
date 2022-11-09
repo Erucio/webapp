@@ -51,7 +51,10 @@
             .productdetail .grid .productInfo .scqs .optionBox:hover{
                 background-color: var(--color-dark);
                 color: white;
-                cursor: pointer;
+            }
+            .productdetail .grid .productInfo .scqs button:active{
+                background-color: var(--color-dark);
+                color: white;
             }
 
         .productdetail .grid .productInfo .scqs .dropdownPlaceholder{
@@ -98,9 +101,6 @@
                     color: white;
                     cursor: pointer;
                 }
-        .productdetail .grid .productInfo .scqs .btn{
-            margin-top: -17px;
-        }
         .productdetail .grid .productInfo .scqs .links{
             display: flex;
             gap: 1.5rem;

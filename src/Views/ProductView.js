@@ -17,7 +17,7 @@ const ProductView = () => {
           <p> Products </p>
       </div>
     </div>
-    <FeaturedProducts title="All Products" products={products.allProducts}/>
+    <FeaturedProducts title="All Products" products={products}/>
     <Footer/>
   </div>
   )

@@ -20,8 +20,8 @@ const navbar = () => {
                         <div className="right-buttons">
                             <NavLink to="/search" end><i className="fa-regular fa-search"></i></NavLink>
                             <NavLink to="/compare" end><i className="fa-regular fa-shuffle"></i></NavLink>
-                            <NavLink to="/saved" end><i className="fa-regular fa-heart"></i></NavLink>
-                            <NavLink to="/cart" end><i className="fa-regular fa-cart-shopping"></i></NavLink>
+                            <NavLink to="/saved" end><i className="fa-regular fa-heart"></i><span>10</span></NavLink>
+                            <NavLink to="/cart" end><i className="fa-regular fa-cart-shopping"></i><span>10</span></NavLink>
                         </div>
                         <div className="searchbox">
                             <input type="text" placeholder="Search Here..."></input>

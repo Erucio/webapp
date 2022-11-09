@@ -3,10 +3,9 @@
     height: 39rem;
 }
     .map .container iframe{
-    position: absolute;
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     height: 60%;
-    right: 0;
     }
     .container .icon{
         display: flex;

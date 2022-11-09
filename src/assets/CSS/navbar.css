@@ -58,8 +58,23 @@
         justify-content: end;
         align-items: center;
         flex: 3;
+        position: relative;
 
     }
+        .header .container .right-buttons span{
+            top: -1rem;
+            left: 1.5rem;
+            align-self: center;
+            text-align: center;
+            line-height: 2.1rem;
+            position: absolute;
+            background-color: var(--color-theme);
+            color: white;
+            border-radius: var(--border-radius-rounded);
+            height: 35px;
+            width: 35px;
+        }
+
         .header .container .right-buttons a.active{
             color: var(--color-white);
             background-color: var(--color-dark);

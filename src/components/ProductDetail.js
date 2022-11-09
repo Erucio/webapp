@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 
 
-const ProductDetail = () => {
+const ProductDetail = ({product}) => {
 
     const [counter, setCounter] = useState(0);
     const increase = () => {
@@ -27,7 +27,7 @@ const ProductDetail = () => {
             <div className="grid">
                 <div className="productImage">
                     <div className="imagePlaceholder"></div>
-                {/* <img src={product.imageName} alt={product.name}></img> */}
+                <img src={product.imageName} alt={product.name}></img>
                     <div className="alternateColors">
                         <div className="colors"></div>
                         <div className="colors"></div>
@@ -35,7 +35,7 @@ const ProductDetail = () => {
                     </div>
                 </div>
                 <div className="productInfo">
-                    <h5 className="title">(product.name)</h5>
+                    <h5 className="title">{product.name}</h5>
                     <p className="category">(product.category)</p>
                     <p className="card-rating">
                         <i className="fa-sharp fa-solid fa-star"></i>
@@ -44,18 +44,18 @@ const ProductDetail = () => {
                         <i className="fa-sharp fa-solid fa-star"></i>
                         <i className="fa-sharp fa-solid fa-star"></i>
                     </p>
-                    <p className="card-price">$(product.price)</p>
+                    <p className="card-price">${product.price}</p>
                     <p className="presentation">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum incidunt, beatae impedit ea voluptates hic quas alias nisi quidem, ex illo rem necessitatibus, officiis magnam! Eum excepturi iusto eaque facilis?</p>
                     <div className="scqs">
                         <h3>Size:</h3>
-                        <div className='optionBox'>S</div>
-                        <div className='optionBox'>M</div>
-                        <div className='optionBox'>L</div>
-                        <div className='optionBox'>XL</div>
+                        <button className='optionBox'>S</button>
+                        <button className='optionBox'>M</button>
+                        <button className='optionBox'>L</button>
+                        <button className='optionBox'>XL</button>
                     </div>
                     <div className="scqs">
                         <h3>Colors:</h3>
-                        <div className="dropdownPlaceholder">Choose an Option <i class="fa-light fa-chevron-down"></i></div>
+                        <div className="dropdownPlaceholder">Choose an Option <i className="fa-light fa-chevron-down"></i></div>
                     </div>
                     <div className="scqs">
                         <h3>Qty:</h3>

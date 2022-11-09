@@ -1,6 +1,6 @@
 import React from 'react'
-import img1 from '../assets/images/img-2.svg'
-import img2 from '../assets/images/img-1.svg'
+import img1 from '../assets/images/1.png'
+import img2 from '../assets/images/2.png'
 import { NavLink } from 'react-router-dom'
 
 
